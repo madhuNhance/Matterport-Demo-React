@@ -13,8 +13,4 @@
 
 - Clone this repository
 - Install dependencies: `npm install`
-- Setup required variables:
-  - `APPLICATION-KEY` - your SDK management key from developer tools
-  - `MODEL_ID` - your modelId
-  - `IFRAME_KEY` - your iframe key
 - Run the server: `npm start`
