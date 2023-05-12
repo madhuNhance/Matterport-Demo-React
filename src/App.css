@@ -1,0 +1,162 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+iframe {
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5)
+}
+
+article {
+  background: #fff;
+  margin: 40px;
+  padding: 20px 20px 40px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgb(43, 43, 43, 0.25);
+}
+
+body {
+  background: #fff;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.showcase_container {
+  position: relative;
+  margin: 0 auto auto auto;
+}
+
+.map_container {
+  opacity: 0;
+  line-height: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #222;
+  transition: opacity 0.75s;
+}
+
+/* Display Minimap -- this class is removed in scenarios where it should not be displayed */
+body.minimap .map_container {
+  opacity: 1;
+}
+
+#mp-showcase {
+  width: 100%;
+  height: 600px;
+}
+
+#app {
+  position: relative;
+}
+
+#map {
+  opacity: 0;
+  z-index: 99;
+  line-height: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  transition: width 0.5s, opacity 0.5s;
+}
+
+
+body.started #map {
+  opacity: 1;
+}
+
+#map:hover {
+  width: 250px;
+}
+
+#map img {
+  width: 100%;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+#map button {
+  display: none;
+  position: absolute;
+  padding: 0 0;
+  margin: 0;
+  height: 0.8rem;
+  width: 0.8rem;
+  margin-top: 0.8rem;
+  margin-left: -0.6rem;
+  border: 0.1rem solid #353535;
+  color: transparent;
+  background: #353535;
+  opacity: 0.5;
+  border-radius: 50%;
+  box-sizing: content-box;
+  font-size: 10px;
+  cursor: pointer;
+  transition: border-color 0.5s, background 0.5s, opacity 0.5s, color 0.5s;
+}
+
+#map button:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+#map:hover button {
+  display: inline-block;
+}
+
+.button-hover:hover {
+  display: inline-block;
+}
+
+#map button.active {
+  background: #ff3158;
+  opacity: 1;
+}
+
+#map button:hover {
+  border: 0.1rem solid #ff3158;
+  background: #ff3158;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
